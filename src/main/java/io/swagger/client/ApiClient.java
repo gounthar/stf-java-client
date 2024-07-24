@@ -147,8 +147,8 @@ public class ApiClient {
    */
   public void setUsername(String username) {
     for (Authentication auth : authentications.values()) {
-      if (auth instanceof HttpBasicAuth) {
-        ((HttpBasicAuth) auth).setUsername(username);
+      if (auth instanceof HttpBasicAuth basicAuth) {
+        basicAuth.setUsername(username);
         return;
       }
     }
@@ -160,8 +160,8 @@ public class ApiClient {
    */
   public void setPassword(String password) {
     for (Authentication auth : authentications.values()) {
-      if (auth instanceof HttpBasicAuth) {
-        ((HttpBasicAuth) auth).setPassword(password);
+      if (auth instanceof HttpBasicAuth basicAuth) {
+        basicAuth.setPassword(password);
         return;
       }
     }
@@ -173,8 +173,8 @@ public class ApiClient {
    */
   public void setApiKey(String apiKey) {
     for (Authentication auth : authentications.values()) {
-      if (auth instanceof ApiKeyAuth) {
-        ((ApiKeyAuth) auth).setApiKey(apiKey);
+      if (auth instanceof ApiKeyAuth keyAuth) {
+        keyAuth.setApiKey(apiKey);
         return;
       }
     }
@@ -186,8 +186,8 @@ public class ApiClient {
    */
   public void setApiKeyPrefix(String apiKeyPrefix) {
     for (Authentication auth : authentications.values()) {
-      if (auth instanceof ApiKeyAuth) {
-        ((ApiKeyAuth) auth).setApiKeyPrefix(apiKeyPrefix);
+      if (auth instanceof ApiKeyAuth keyAuth) {
+        keyAuth.setApiKeyPrefix(apiKeyPrefix);
         return;
       }
     }
@@ -199,8 +199,8 @@ public class ApiClient {
    */
   public void setAccessToken(String accessToken) {
     for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setAccessToken(accessToken);
+      if (auth instanceof OAuth oAuth) {
+        oAuth.setAccessToken(accessToken);
         return;
       }
     }
@@ -316,11 +316,11 @@ public class ApiClient {
   public String parameterToString(Object param) {
     if (param == null) {
       return "";
-    } else if (param instanceof Date) {
-      return formatDate((Date) param);
-    } else if (param instanceof Collection) {
+    } else if (param instanceof Date date) {
+      return formatDate(date);
+    } else if (param instanceof Collection<?> collection) {
       StringBuilder b = new StringBuilder();
-      for(Object o : (Collection<?>)param) {
+      for(Object o : collection) {
         if(b.length() > 0) {
           b.append(",");
         }
@@ -342,8 +342,8 @@ public class ApiClient {
     if (name == null || name.isEmpty() || value == null) return params;
 
     Collection<?> valueCollection = null;
-    if (value instanceof Collection<?>) {
-      valueCollection = (Collection<?>) value;
+    if (value instanceof Collection<?> collection) {
+      valueCollection = collection;
     } else {
       params.add(new Pair(name, parameterToString(value)));
       return params;
