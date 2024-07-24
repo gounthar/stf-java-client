@@ -16,7 +16,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12</version>
+        <version>3.3.1</version>
         <configuration>
           <systemProperties>
             <property>
@@ -94,7 +94,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.2</version>
+        <version>3.13.0</version>
         <configuration>
           <release>17</release>
         </configuration>
@@ -211,12 +211,12 @@
     </dependency>
   </dependencies>
   <properties>
-    <swagger-annotations-version>1.5.4</swagger-annotations-version>
+    <swagger-annotations-version>1.6.14</swagger-annotations-version>
     <jersey-version>1.19.4</jersey-version>
     <jackson-version>2.17.2</jackson-version>
-    <jodatime-version>2.3</jodatime-version>
+    <jodatime-version>2.12.7</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
-    <junit-version>4.8.1</junit-version>
+    <junit-version>4.13.2</junit-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <github.global.server>github</github.global.server>
     <github.global.repositoryName>stf-java-client</github.global.repositoryName>
