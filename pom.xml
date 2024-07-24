@@ -214,7 +214,7 @@
     <swagger-annotations-version>1.6.14</swagger-annotations-version>
     <jersey-version>1.19.4</jersey-version>
     <jackson-version>2.17.2</jackson-version>
-    <jodatime-version>2.3</jodatime-version>
+    <jodatime-version>2.12.7</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <junit-version>4.13.2</junit-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
