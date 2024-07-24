@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.gounthar</groupId>
     <artifactId>swagger-java-client</artifactId>
     <packaging>jar</packaging>
     <name>swagger-java-client</name>
-    <version>1.6.0-SNAPSHOT</version>
+    <version>1.6.0</version>
 
     <prerequisites>
         <maven>2.2.0</maven>
@@ -14,7 +13,7 @@
         <url>https://github.com/gounthar/stf-java-client</url>
         <connection>scm:git:https://github.com/gounthar/stf-java-client.git</connection>
         <developerConnection>scm:git:https://github.com/gounthar/stf-java-client.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>swagger-java-client-1.6.0</tag>
     </scm>
     <build>
         <plugins>
