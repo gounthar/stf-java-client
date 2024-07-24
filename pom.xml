@@ -216,7 +216,7 @@
     <jackson-version>2.17.2</jackson-version>
     <jodatime-version>2.3</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
-    <junit-version>4.8.1</junit-version>
+    <junit-version>4.13.2</junit-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <github.global.server>github</github.global.server>
     <github.global.repositoryName>stf-java-client</github.global.repositoryName>
