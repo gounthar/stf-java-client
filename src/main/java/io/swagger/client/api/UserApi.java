@@ -165,7 +165,6 @@ public class UserApi {
    * Add a device to a user
    * The User Devices endpoint will request stf server for a new device.
    * @param device Device to add
-   * @return void
    */
   public void addUserDevice(AddUserDevicePayload device) throws ApiException {
     Object postBody = device;
@@ -260,7 +259,6 @@ public class UserApi {
    * Delete User Device
    * The User Devices endpoint will request for device release from stf server. It will return request accepted if device is being used by current user
    * @param serial Device Serial
-   * @return void
    */
   public void deleteUserDeviceBySerial(String serial) throws ApiException {
     Object postBody = null;
@@ -353,7 +351,6 @@ public class UserApi {
    * Remote Disconnect
    * The device connect endpoint will request stf server to disconnect remotely
    * @param serial Device Serial
-   * @return void
    */
   public void remoteDisconnectUserDeviceBySerial(String serial) throws ApiException {
     Object postBody = null;
